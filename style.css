@@ -175,17 +175,23 @@ h5{font-size:16px;font-weight:600;color:var(--ivory);margin:4px 0 10px}
 
 /* language switcher */
 .i18n-wait body{visibility:hidden}
-.lang{display:flex;align-items:center;gap:2px;font-size:12px;letter-spacing:.12em;border:1px solid var(--line);border-radius:999px;padding:3px 8px}
-.lang span{color:rgba(184,157,110,.45);font-size:11px}
-.lang button{background:none;border:0;cursor:pointer;font:inherit;letter-spacing:inherit;color:var(--muted);padding:3px 5px;border-radius:999px;transition:color .2s}
-.lang button:hover{color:var(--gold2)}
-.lang button.is-on{color:var(--gold);font-weight:600}
-.lang button:focus-visible{outline:1px solid var(--gold);outline-offset:1px}
+.lang{position:relative}
+.lang__btn{display:flex;align-items:center;gap:6px;min-height:40px;padding:0 10px 0 8px;background:none;border:1px solid var(--line);border-radius:999px;color:var(--gold);font:500 12px/1 var(--sans);letter-spacing:.12em;cursor:pointer;-webkit-tap-highlight-color:transparent;transition:border-color .2s,background .2s}
+.lang__btn:hover,.lang__btn[aria-expanded="true"]{border-color:rgba(184,157,110,.55);background:rgba(184,157,110,.08)}
+.lang__btn:focus-visible{outline:1px solid var(--gold);outline-offset:2px}
+.lang__globe{display:block;flex:none}
+.lang__chev{opacity:.7;transition:transform .2s}
+.lang__btn[aria-expanded="true"] .lang__chev{transform:rotate(180deg)}
+.lang__menu{position:absolute;right:0;top:calc(100% + 8px);z-index:20;list-style:none;margin:0;padding:6px;min-width:176px;background:#15161A;border:1px solid var(--line);border-radius:14px;box-shadow:0 18px 40px rgba(0,0,0,.55)}
+.lang__menu[hidden]{display:none}
+.lang__menu button{display:flex;align-items:center;justify-content:space-between;gap:16px;width:100%;min-height:44px;padding:0 12px 0 14px;background:none;border:0;border-radius:10px;color:var(--ivory);font:400 15px/1 var(--sans);text-align:left;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.lang__menu button:hover,.lang__menu button:focus-visible{background:rgba(184,157,110,.1);outline:none}
+.lang__menu button[aria-checked="true"]{color:var(--gold)}
+.lang__check{flex:none;color:var(--gold);visibility:hidden}
+.lang__menu button[aria-checked="true"] .lang__check{visibility:visible}
 .langnote{margin-top:16px;font-size:14px;color:var(--gold2)}
 .langnote[hidden]{display:none}
 .langnote--center{margin:-12px auto 0}
 @media (max-width:760px){
   .nav__links{gap:10px}
-  .lang{padding:2px 6px}
-  .lang button{padding:3px 4px}
 }

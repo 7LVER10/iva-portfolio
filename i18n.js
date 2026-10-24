@@ -376,12 +376,13 @@
     document.title = META[lang].title;
     var md = document.querySelector('meta[name="description"]');
     if (md) md.setAttribute('content', META[lang].desc);
-    var bs = document.querySelectorAll('.lang button');
+    var bs = document.querySelectorAll('.lang__menu button[data-lang]');
     for (var j = 0; j < bs.length; j++) {
       var on = bs[j].getAttribute('data-lang') === lang;
-      bs[j].classList.toggle('is-on', on);
-      bs[j].setAttribute('aria-pressed', on ? 'true' : 'false');
+      bs[j].setAttribute('aria-checked', on ? 'true' : 'false');
     }
+    var cur = document.querySelector('.lang__cur');
+    if (cur) cur.textContent = lang.toUpperCase();
     if (save) {
       try { localStorage.setItem(KEY, lang); } catch (e) {}
     }
@@ -393,11 +394,35 @@
   try { fromUrl = !!new URLSearchParams(location.search).get('lang'); } catch (e) {}
   apply(initial, fromUrl);
 
-  var btns = document.querySelectorAll('.lang button');
+  var toggle = document.querySelector('.lang__btn');
+  var menu = document.querySelector('.lang__menu');
+  function setOpen(open) {
+    if (!toggle || !menu) return;
+    menu.hidden = !open;
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    if (open) {
+      var c = menu.querySelector('button[aria-checked="true"]') || menu.querySelector('button');
+      if (c && document.activeElement === toggle && toggle.matches(':focus-visible')) c.focus();
+    }
+  }
+  if (toggle && menu) {
+    toggle.addEventListener('click', function (e) {
+      e.stopPropagation();
+      setOpen(menu.hidden);
+    });
+    menu.addEventListener('click', function (e) { e.stopPropagation(); });
+    document.addEventListener('click', function () { setOpen(false); });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && !menu.hidden) { setOpen(false); toggle.focus(); }
+    });
+  }
+
+  var btns = document.querySelectorAll('.lang__menu button[data-lang]');
   for (var b = 0; b < btns.length; b++) {
     btns[b].addEventListener('click', function () {
       var l = this.getAttribute('data-lang');
       apply(l, true);
+      setOpen(false);
       try {
         var u = new URL(location.href);
         u.searchParams.set('lang', l);
