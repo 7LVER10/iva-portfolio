@@ -7,16 +7,26 @@
 <meta name="description" content="IVA проектирует цифровые системы: Telegram-боты, Mini Apps, ИИ-агенты и автоматизация процессов. Кейсы: ассистент и канал IVA, FreelanceMatch.">
 <meta name="theme-color" content="#0E0F11">
 <meta property="og:title" content="IVA — AI Engineering &amp; Automation">
-<meta property="og:description" content="Портфолио IVA: Telegram-боты, Mini Apps, ИИ-агенты и автоматизация процессов.">
+<meta property="og:description" content="Portfolio · Портфолио · Portföy — Telegram bots, Mini Apps, AI agents, process automation.">
 <meta property="og:image" content="https://7lver10.github.io/iva-portfolio/assets/img/logo_512.png">
 <meta property="og:url" content="https://7lver10.github.io/iva-portfolio/">
 <meta property="og:type" content="website">
+<link rel="alternate" hreflang="ru" href="https://7lver10.github.io/iva-portfolio/?lang=ru">
+<link rel="alternate" hreflang="en" href="https://7lver10.github.io/iva-portfolio/?lang=en">
+<link rel="alternate" hreflang="tr" href="https://7lver10.github.io/iva-portfolio/?lang=tr">
+<link rel="alternate" hreflang="x-default" href="https://7lver10.github.io/iva-portfolio/">
 <link rel="icon" type="image/png" href="assets/img/logo_64.png">
 <link rel="apple-touch-icon" href="assets/img/logo_180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap&subset=cyrillic,latin-ext" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<script>
+/* Ранний выбор языка, чтобы не мигал русский текст */
+(function(){try{var L=['ru','en','tr'],q=new URLSearchParams(location.search).get('lang'),s=localStorage.getItem('iva_lang'),l;
+if(q&&L.indexOf(q.toLowerCase())>-1){l=q.toLowerCase();}else if(s&&L.indexOf(s)>-1){l=s;}else{var n=(navigator.languages&&navigator.languages[0])||navigator.language||'en';n=n.toLowerCase();l=n.indexOf('ru')===0?'ru':(n.indexOf('tr')===0?'tr':'en');}
+document.documentElement.lang=l;if(l!=='ru'){document.documentElement.className+=' i18n-wait';setTimeout(function(){document.documentElement.classList.remove('i18n-wait');},2500);}}catch(e){}})();
+</script>
 </head>
 <body>
 
@@ -24,10 +34,13 @@
   <div class="wrap nav__in">
     <a class="brand" href="#top"><img src="assets/img/logo_64.png" alt="" width="32" height="32"><span>I.V.A</span></a>
     <nav class="nav__links">
-      <a href="#cases">Кейсы</a>
-      <a href="#services">Услуги</a>
-      <a href="#process">Как работаем</a>
-      <a class="nav__cta" href="https://t.me/ivavit_bot?start=audit">Аудит</a>
+      <a href="#cases" data-i18n="nav_cases">Кейсы</a>
+      <a href="#services" data-i18n="nav_services">Услуги</a>
+      <a href="#process" data-i18n="nav_process">Как работаем</a>
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-lang="ru">RU</button><span>·</span><button type="button" data-lang="en">EN</button><span>·</span><button type="button" data-lang="tr">TR</button>
+      </div>
+      <a class="nav__cta" href="https://t.me/ivavit_bot?start=audit" data-i18n="nav_audit">Аудит</a>
     </nav>
   </div>
 </header>
@@ -37,32 +50,33 @@
 <section class="hero">
   <div class="wrap hero__in">
     <div class="hero__text">
-      <p class="eyebrow">IVA · AI Engineering &amp; Automation</p>
-      <h1>Цифровые системы, которые <em>берут на себя рутину</em></h1>
-      <p class="lead">Мы создаём не просто сайты, ботов или отдельные сервисы. Мы проектируем системы, которые ускоряют бизнес-процессы и превращают заявки, данные и коммуникации в управляемый результат.</p>
+      <p class="eyebrow" lang="en">IVA · AI Engineering &amp; Automation</p>
+      <h1 data-i18n="hero_h1">Цифровые системы, которые <em>берут на себя рутину</em></h1>
+      <p class="lead" data-i18n="hero_lead">Мы создаём не просто сайты, ботов или отдельные сервисы. Мы проектируем системы, которые ускоряют бизнес-процессы и превращают заявки, данные и коммуникации в управляемый результат.</p>
       <div class="btns">
-        <a class="btn btn--gold" href="https://t.me/ivavit_bot?start=audit">Бесплатный аудит</a>
-        <a class="btn btn--line" href="https://t.me/iva7lver">Написать @iva7lver</a>
+        <a class="btn btn--gold" href="https://t.me/ivavit_bot?start=audit" data-i18n="btn_audit">Бесплатный аудит</a>
+        <a class="btn btn--line" href="https://t.me/iva7lver" data-i18n="btn_write">Написать @iva7lver</a>
       </div>
+      <p class="langnote" data-i18n="langnote"></p>
     </div>
     <div class="hero__logo">
-      <img src="assets/img/logo_512.png" alt="Логотип IVA" width="512" height="512">
+      <img src="assets/img/logo_512.png" alt="IVA" width="512" height="512">
     </div>
   </div>
 </section>
 
 <section class="principle">
   <div class="wrap">
-    <p class="quote">Не хаотичные «умные чат-боты», а <em>управляемые ИИ-системы</em>: с понятной задачей, чёткими правилами, контролем результата и интеграцией в реальные процессы.</p>
+    <p class="quote" data-i18n="quote">Не хаотичные «умные чат-боты», а <em>управляемые ИИ-системы</em>: с понятной задачей, чёткими правилами, контролем результата и интеграцией в реальные процессы.</p>
   </div>
 </section>
 
 <!-- КЕЙСЫ -->
 <section id="cases" class="section">
   <div class="wrap">
-    <p class="eyebrow">Кейсы</p>
-    <h2>Что уже работает</h2>
-    <p class="muted">Каждый кейс по одной схеме: задача → архитектура → решение → живые ссылки и экраны → результат.</p>
+    <p class="eyebrow" data-i18n="cases_eyebrow">Кейсы</p>
+    <h2 data-i18n="cases_h2">Что уже работает</h2>
+    <p class="muted" data-i18n="cases_sub">Каждый кейс по одной схеме: задача → архитектура → решение → живые ссылки и экраны → результат.</p>
   </div>
 
   <!-- Кейс 1 -->
@@ -71,104 +85,104 @@
       <div class="case__head">
         <span class="case__num">№1</span>
         <div>
-          <h3>Telegram-ассистент и контент-система IVA</h3>
-          <p class="case__lead">Первый кейс — наш собственный. Для IVA мы собрали ту же систему, которую предлагаем клиентам: бот принимает заявки, ИИ-агенты готовят контент, а решения остаются за человеком.</p>
-          <p class="tags"><span>Telegram-бот</span><span>Make</span><span>ИИ-агенты</span><span>RU · EN · TR</span></p>
+          <h3 data-i18n="c1_title">Telegram-ассистент и контент-система IVA</h3>
+          <p class="case__lead" data-i18n="c1_lead">Первый кейс — наш собственный. Для IVA мы собрали ту же систему, которую предлагаем клиентам: бот принимает заявки, ИИ-агенты готовят контент, а решения остаются за человеком.</p>
+          <p class="tags"><span data-i18n="tag_bot">Telegram-бот</span><span>Make</span><span data-i18n="tag_agents">ИИ-агенты</span><span>RU · EN · TR</span></p>
         </div>
       </div>
 
       <div class="steps">
         <div class="step">
-          <h4><i>01</i> Задача</h4>
-          <p>У молодой компании нет отдела продаж и контент-менеджера. При этом нужно:</p>
+          <h4><i>01</i> <span data-i18n="st_task">Задача</span></h4>
+          <p data-i18n="c1_task_intro">У молодой компании нет отдела продаж и контент-менеджера. При этом нужно:</p>
           <ul>
-            <li>отвечать клиентам из разных стран круглосуточно, на их языке;</li>
-            <li>не терять заявки и сразу передавать основателю тех, кто готов к разговору;</li>
-            <li>каждый день выпускать посты в канал и не тратить на это вечер;</li>
-            <li>не допустить, чтобы переписка с клиентами попала в публичный канал;</li>
-            <li>уложиться в бесплатный тариф платформы автоматизации.</li>
+            <li data-i18n="c1_task_1">отвечать клиентам из разных стран круглосуточно, на их языке;</li>
+            <li data-i18n="c1_task_2">не терять заявки и сразу передавать основателю тех, кто готов к разговору;</li>
+            <li data-i18n="c1_task_3">каждый день выпускать посты в канал и не тратить на это вечер;</li>
+            <li data-i18n="c1_task_4">не допустить, чтобы переписка с клиентами попала в публичный канал;</li>
+            <li data-i18n="c1_task_5">уложиться в бесплатный тариф платформы автоматизации.</li>
           </ul>
         </div>
 
         <div class="step">
-          <h4><i>02</i> Архитектура</h4>
-          <p>Одна система, две независимые линии. Сверху — заявки клиентов, снизу — контент канала. Моста между ними нет.</p>
+          <h4><i>02</i> <span data-i18n="st_arch">Архитектура</span></h4>
+          <p data-i18n="c1_arch_intro">Одна система, две независимые линии. Сверху — заявки клиентов, снизу — контент канала. Моста между ними нет.</p>
           <div class="flow">
             <div class="flow__row">
-              <div class="node">Клиент<small>пишет на RU, EN или TR</small></div>
+              <div class="node" data-i18n="c1_n1">Клиент<small>пишет на RU, EN или TR</small></div>
               <div class="arrow"></div>
-              <div class="node node--gold">Ассистент I.V.A<small>Make + ИИ</small></div>
+              <div class="node node--gold" data-i18n="c1_n2">Ассистент I.V.A<small>Make + ИИ</small></div>
               <div class="arrow"></div>
-              <div class="node">Основатель<small>карточка заявки на русском</small></div>
+              <div class="node" data-i18n="c1_n3">Основатель<small>карточка заявки на русском</small></div>
             </div>
-            <div class="flow__sep">граница: данные клиентов не попадают в канал</div>
+            <div class="flow__sep" data-i18n="c1_sep">граница: данные клиентов не попадают в канал</div>
             <div class="flow__row">
-              <div class="node">ИИ-агенты<small>аналитик и контент-менеджер</small></div>
+              <div class="node" data-i18n="c1_n4">ИИ-агенты<small>аналитик и контент-менеджер</small></div>
               <div class="arrow"></div>
-              <div class="node node--gold">Очередь контента<small>пост дня в 10:00 на одобрение</small></div>
+              <div class="node node--gold" data-i18n="c1_n5">Очередь контента<small>пост дня в 10:00 на одобрение</small></div>
               <div class="arrow"></div>
-              <div class="node">Канал<small>только после нажатия «Опубликовать»</small></div>
+              <div class="node" data-i18n="c1_n6">Канал<small>только после нажатия «Опубликовать»</small></div>
             </div>
           </div>
-          <p class="note">Вся система работает на двух сценариях Make на бесплатном тарифе.</p>
+          <p class="note" data-i18n="c1_arch_note">Вся система работает на двух сценариях Make на бесплатном тарифе.</p>
         </div>
 
         <div class="step">
-          <h4><i>03</i> Решение</h4>
+          <h4><i>03</i> <span data-i18n="st_solution">Решение</span></h4>
           <div class="cols">
             <div>
-              <h5>Ассистент в Telegram</h5>
+              <h5 data-i18n="c1_s_h1">Ассистент в Telegram</h5>
               <ul>
-                <li>Отвечает на русском, английском и турецком. Язык определяет сам, основатель всё получает на русском.</li>
-                <li>Меню из трёх кнопок: «Бесплатный аудит», «Услуги», «Связаться с основателем».</li>
-                <li>Свободные вопросы обрабатывает ИИ по правилам: спокойный тон, цены и сроки не называет, ничего не выдумывает, не выдаёт себя за человека.</li>
-                <li>Заявку из свободного текста превращает в карточку: имя, ниша, как сейчас проходят заявки, контакт, что уточнить на встрече.</li>
-                <li>О заинтересованном клиенте основатель узнаёт сразу и отвечает прямо из чата с ботом. Справочные вопросы его не беспокоят.</li>
-                <li>Если ИИ недоступен, клиент всё равно получает вежливый ответ, а сообщение уходит основателю.</li>
+                <li data-i18n="c1_s1">Отвечает на русском, английском и турецком. Язык определяет сам, основатель всё получает на русском.</li>
+                <li data-i18n="c1_s2">Меню из трёх кнопок: «Бесплатный аудит», «Услуги», «Связаться с основателем».</li>
+                <li data-i18n="c1_s3">Свободные вопросы обрабатывает ИИ по правилам: спокойный тон, цены и сроки не называет, ничего не выдумывает, не выдаёт себя за человека.</li>
+                <li data-i18n="c1_s4">Заявку из свободного текста превращает в карточку: имя, ниша, как сейчас проходят заявки, контакт, что уточнить на встрече.</li>
+                <li data-i18n="c1_s5">О заинтересованном клиенте основатель узнаёт сразу и отвечает прямо из чата с ботом. Справочные вопросы его не беспокоят.</li>
+                <li data-i18n="c1_s6">Если ИИ недоступен, клиент всё равно получает вежливый ответ, а сообщение уходит основателю.</li>
               </ul>
             </div>
             <div>
-              <h5>Канал через одобрение</h5>
+              <h5 data-i18n="c1_s_h2">Канал через одобрение</h5>
               <ul>
-                <li>Каждый день в 10:00 бот присылает превью поста и две кнопки: «Опубликовать» и «Отменить».</li>
-                <li>Без нажатия в канал ничего не уходит. Повторное нажатие не создаёт дубль.</li>
-                <li>В канал может попасть только пост из очереди контента. Возможность отправить туда сообщение или файл клиента убрана из бота полностью.</li>
+                <li data-i18n="c1_s7">Каждый день в 10:00 бот присылает превью поста и две кнопки: «Опубликовать» и «Отменить».</li>
+                <li data-i18n="c1_s8">Без нажатия в канал ничего не уходит. Повторное нажатие не создаёт дубль.</li>
+                <li data-i18n="c1_s9">В канал может попасть только пост из очереди контента. Возможность отправить туда сообщение или файл клиента убрана из бота полностью.</li>
               </ul>
-              <h5>Команда ИИ-агентов</h5>
+              <h5 data-i18n="c1_s_h3">Команда ИИ-агентов</h5>
               <ul>
-                <li>Аналитик разобрал 4 профильных канала (341 пост) и показал, какие форматы и темы получают больше реакций.</li>
-                <li>Контент-менеджер готовит посты-карусели: анимированная обложка и 6–9 слайдов в едином стиле.</li>
+                <li data-i18n="c1_s10">Аналитик разобрал 4 профильных канала (341 пост) и показал, какие форматы и темы получают больше реакций.</li>
+                <li data-i18n="c1_s11">Контент-менеджер готовит посты-карусели: анимированная обложка и 6–9 слайдов в едином стиле.</li>
               </ul>
             </div>
           </div>
         </div>
 
         <div class="step">
-          <h4><i>04</i> Живые ссылки и экраны</h4>
+          <h4><i>04</i> <span data-i18n="st_links">Живые ссылки и экраны</span></h4>
           <div class="links">
-            <a href="https://t.me/ivavit_bot">Бот @ivavit_bot</a>
-            <a href="https://t.me/I_V_A_A_V_I">Канал I.V.A</a>
-            <a href="https://t.me/I_V_A_A_V_I/8">Пост-кейс в канале</a>
+            <a href="https://t.me/ivavit_bot" data-i18n="c1_l1">Бот @ivavit_bot</a>
+            <a href="https://t.me/I_V_A_A_V_I" data-i18n="c1_l2">Канал I.V.A</a>
+            <a href="https://t.me/I_V_A_A_V_I/8" data-i18n="l_post">Пост-кейс в канале</a>
           </div>
           <div class="gallery gallery--slides">
-            <figure><a href="assets/img/c1_03.jpg"><img src="assets/img/c1_03.jpg" alt="Схема: одна система, две линии" width="864" height="1080"></a><figcaption>Архитектура: две линии</figcaption></figure>
-            <figure><a href="assets/img/c1_04.jpg"><img src="assets/img/c1_04.jpg" alt="Ассистент отвечает на трёх языках" width="864" height="1080"></a><figcaption>Ответы на трёх языках</figcaption></figure>
-            <figure><a href="assets/img/c1_05.jpg"><img src="assets/img/c1_05.jpg" alt="Свободный текст превращается в карточку заявки" width="864" height="1080"></a><figcaption>Карточка заявки</figcaption></figure>
-            <figure><a href="assets/img/c1_06.jpg"><img src="assets/img/c1_06.jpg" alt="Пост в канал только после одобрения" width="864" height="1080"></a><figcaption>Публикация через одобрение</figcaption></figure>
+            <figure><a href="assets/img/c1_03.jpg"><img src="assets/img/c1_03.jpg" alt="" width="864" height="1080"></a><figcaption data-i18n="c1_f1">Архитектура: две линии</figcaption></figure>
+            <figure><a href="assets/img/c1_04.jpg"><img src="assets/img/c1_04.jpg" alt="" width="864" height="1080"></a><figcaption data-i18n="c1_f2">Ответы на трёх языках</figcaption></figure>
+            <figure><a href="assets/img/c1_05.jpg"><img src="assets/img/c1_05.jpg" alt="" width="864" height="1080"></a><figcaption data-i18n="c1_f3">Карточка заявки</figcaption></figure>
+            <figure><a href="assets/img/c1_06.jpg"><img src="assets/img/c1_06.jpg" alt="" width="864" height="1080"></a><figcaption data-i18n="c1_f4">Публикация через одобрение</figcaption></figure>
           </div>
-          <p class="note">Слайды из поста-кейса в канале IVA.</p>
+          <p class="note" data-i18n="c1_f_note">Слайды из поста-кейса в канале IVA.</p>
         </div>
 
         <div class="step step--result">
-          <h4><i>05</i> Результат</h4>
+          <h4><i>05</i> <span data-i18n="st_result">Результат</span></h4>
           <ul class="results">
-            <li>Бот и канал запущены за одну рабочую ночь, 24.10.2026.</li>
-            <li>Бот принимает заявки на трёх языках. Тестовая заявка на турецком пришла основателю готовой карточкой на русском.</li>
-            <li>Очередь контента заполнена на несколько дней вперёд, публикация занимает одно нажатие.</li>
-            <li>Данные клиентов изолированы от канала самой архитектурой бота.</li>
-            <li>Месячного лимита бесплатного тарифа хватает примерно на 200–250 ответов ИИ плюс ежедневный постинг.</li>
+            <li data-i18n="c1_r1">Бот и канал запущены за одну рабочую ночь, 24.10.2026.</li>
+            <li data-i18n="c1_r2">Бот принимает заявки на трёх языках. Тестовая заявка на турецком пришла основателю готовой карточкой на русском.</li>
+            <li data-i18n="c1_r3">Очередь контента заполнена на несколько дней вперёд, публикация занимает одно нажатие.</li>
+            <li data-i18n="c1_r4">Данные клиентов изолированы от канала самой архитектурой бота.</li>
+            <li data-i18n="c1_r5">Месячного лимита бесплатного тарифа хватает примерно на 200–250 ответов ИИ плюс ежедневный постинг.</li>
           </ul>
-          <p class="note">Цифр по заявкам и охватам пока нет: система только запущена. Обновим кейс, когда они появятся.</p>
+          <p class="note" data-i18n="c1_r_note">Цифр по заявкам и охватам пока нет: система только запущена. Обновим кейс, когда они появятся.</p>
         </div>
       </div>
     </div>
@@ -181,102 +195,102 @@
         <span class="case__num">№2</span>
         <div>
           <h3>FreelanceMatch — Telegram Mini App</h3>
-          <p class="case__lead">«Тиндер для фриланса» внутри Telegram. Заказчики и фрилансеры листают карточки друг друга: вправо — «интересно», влево — «пропустить». При взаимном интересе открывается чат, дальше — сделка и отзыв с рейтингом.</p>
+          <p class="case__lead" data-i18n="c2_lead">«Тиндер для фриланса» внутри Telegram. Заказчики и фрилансеры листают карточки друг друга: вправо — «интересно», влево — «пропустить». При взаимном интересе открывается чат, дальше — сделка и отзыв с рейтингом.</p>
           <p class="tags"><span>Telegram Mini App</span><span>React</span><span>Node.js</span><span>Supabase</span></p>
         </div>
       </div>
 
       <div class="steps">
         <div class="step">
-          <h4><i>01</i> Задача</h4>
-          <p>Проект был недоделан: код написан в июне, но ни разу не запускался. Нужно было довести его до рабочего приложения и запустить. В коде нашлись ошибки, из-за которых приложение не открылось бы вовсе:</p>
+          <h4><i>01</i> <span data-i18n="st_task">Задача</span></h4>
+          <p data-i18n="c2_task_intro">Проект был недоделан: код написан в июне, но ни разу не запускался. Нужно было довести его до рабочего приложения и запустить. В коде нашлись ошибки, из-за которых приложение не открылось бы вовсе:</p>
           <ul>
-            <li>в Telegram сразу показывалась бы «Ошибка загрузки»: не был подключён скрипт Telegram;</li>
-            <li>библиотека свайпов ломала сборку — вместо приложения был белый экран;</li>
-            <li>оплата не работала, а сумма в рублях уходила как сумма в USDT;</li>
-            <li>можно было читать чужие чаты и действовать от имени другого пользователя;</li>
-            <li>отзывы были написаны, но нигде не показывались;</li>
-            <li>деплой был рассчитан на платформу, которая больше не бесплатна.</li>
+            <li data-i18n="c2_task_1">в Telegram сразу показывалась бы «Ошибка загрузки»: не был подключён скрипт Telegram;</li>
+            <li data-i18n="c2_task_2">библиотека свайпов ломала сборку — вместо приложения был белый экран;</li>
+            <li data-i18n="c2_task_3">оплата не работала, а сумма в рублях уходила как сумма в USDT;</li>
+            <li data-i18n="c2_task_4">можно было читать чужие чаты и действовать от имени другого пользователя;</li>
+            <li data-i18n="c2_task_5">отзывы были написаны, но нигде не показывались;</li>
+            <li data-i18n="c2_task_6">деплой был рассчитан на платформу, которая больше не бесплатна.</li>
           </ul>
         </div>
 
         <div class="step">
-          <h4><i>02</i> Архитектура</h4>
+          <h4><i>02</i> <span data-i18n="st_arch">Архитектура</span></h4>
           <div class="flow">
             <div class="flow__row">
-              <div class="node">Telegram-бот<small>кнопка открывает приложение</small></div>
+              <div class="node" data-i18n="c2_n1">Telegram-бот<small>кнопка открывает приложение</small></div>
               <div class="arrow"></div>
-              <div class="node node--gold">Mini App<small>React, вход через Telegram</small></div>
+              <div class="node node--gold" data-i18n="c2_n2">Mini App<small>React, вход через Telegram</small></div>
               <div class="arrow"></div>
-              <div class="node">Сервер с ботом<small>Node.js на Render, webhook</small></div>
+              <div class="node" data-i18n="c2_n3">Сервер с ботом<small>Node.js на Render, webhook</small></div>
               <div class="arrow"></div>
-              <div class="node">База данных<small>Supabase</small></div>
+              <div class="node" data-i18n="c2_n4">База данных<small>Supabase</small></div>
             </div>
-            <div class="flow__sep">лента заказов</div>
+            <div class="flow__sep" data-i18n="c2_sep">лента заказов</div>
             <div class="flow__row">
-              <div class="node">Открытые каналы<small>заказы для фрилансеров</small></div>
+              <div class="node" data-i18n="c2_n5">Открытые каналы<small>заказы для фрилансеров</small></div>
               <div class="arrow"></div>
-              <div class="node node--gold">Сборщик<small>GitHub Actions, каждые 3 часа</small></div>
+              <div class="node node--gold" data-i18n="c2_n6">Сборщик<small>GitHub Actions, каждые 3 часа</small></div>
               <div class="arrow"></div>
-              <div class="node">Сервер<small>без дублей, хранение 7 дней</small></div>
+              <div class="node" data-i18n="c2_n7">Сервер<small>без дублей, хранение 7 дней</small></div>
               <div class="arrow"></div>
-              <div class="node">Лента и подборка<small>в приложении и в боте</small></div>
+              <div class="node" data-i18n="c2_n8">Лента и подборка<small>в приложении и в боте</small></div>
             </div>
           </div>
-          <p class="note">Каждый запрос к серверу проверяется подписью Telegram. Сервер, база и сборщик работают на бесплатных тарифах.</p>
+          <p class="note" data-i18n="c2_arch_note">Каждый запрос к серверу проверяется подписью Telegram. Сервер, база и сборщик работают на бесплатных тарифах.</p>
         </div>
 
         <div class="step">
-          <h4><i>03</i> Решение</h4>
+          <h4><i>03</i> <span data-i18n="st_solution">Решение</span></h4>
           <div class="cols">
             <div>
-              <h5>Рабочий Mini App</h5>
+              <h5 data-i18n="c2_s_h1">Рабочий Mini App</h5>
               <ul>
-                <li>Вход через аккаунт Telegram, без регистрации.</li>
-                <li>Полный путь: свайп → мэтч → чат → сделка → отзыв. Рейтинг виден на карточке.</li>
-                <li>Свайпы на собственном компоненте, с плашками «ИНТЕРЕСНО» и «ПРОПУСК».</li>
-                <li>Уведомления о мэтчах, сообщениях и сделках приходят в бот.</li>
-                <li>Счёт выставляется в рублях, оплатить можно в USDT или TON.</li>
+                <li data-i18n="c2_s1">Вход через аккаунт Telegram, без регистрации.</li>
+                <li data-i18n="c2_s2">Полный путь: свайп → мэтч → чат → сделка → отзыв. Рейтинг виден на карточке.</li>
+                <li data-i18n="c2_s3">Свайпы на собственном компоненте, с плашками «ИНТЕРЕСНО» и «ПРОПУСК».</li>
+                <li data-i18n="c2_s4">Уведомления о мэтчах, сообщениях и сделках приходят в бот.</li>
+                <li data-i18n="c2_s5">Счёт выставляется в рублях, оплатить можно в USDT или TON.</li>
               </ul>
             </div>
             <div>
-              <h5>Живая лента заказов</h5>
+              <h5 data-i18n="c2_s_h2">Живая лента заказов</h5>
               <ul>
-                <li>Фрилансер видит заказы из открытых источников, лента обновляется каждые 3 часа.</li>
-                <li>Галочка на заказе сохраняет его в «Мои отклики», а бот присылает заказ в чат со ссылкой на оригинал.</li>
-                <li>Ежедневная подборка — до 5 новых заказов под навыки профиля, не чаще раза в день и только тем, кто сам нажал «Старт». Отписка — /stop.</li>
-                <li>Интерфейс в палитре IVA: обсидиан, золото, слоновая кость.</li>
+                <li data-i18n="c2_s6">Фрилансер видит заказы из открытых источников, лента обновляется каждые 3 часа.</li>
+                <li data-i18n="c2_s7">Галочка на заказе сохраняет его в «Мои отклики», а бот присылает заказ в чат со ссылкой на оригинал.</li>
+                <li data-i18n="c2_s8">Ежедневная подборка — до 5 новых заказов под навыки профиля, не чаще раза в день и только тем, кто сам нажал «Старт». Отписка — /stop.</li>
+                <li data-i18n="c2_s9">Интерфейс в палитре IVA: обсидиан, золото, слоновая кость.</li>
               </ul>
             </div>
           </div>
         </div>
 
         <div class="step">
-          <h4><i>04</i> Живые ссылки и экраны</h4>
+          <h4><i>04</i> <span data-i18n="st_links">Живые ссылки и экраны</span></h4>
           <div class="links">
-            <a href="https://t.me/goldbergggbot">Открыть FreelanceMatch</a>
-            <a href="https://7lver10.github.io/freelancematch-demo/">Публичное демо в браузере</a>
-            <a href="https://t.me/I_V_A_A_V_I/19">Пост-кейс в канале</a>
+            <a href="https://t.me/goldbergggbot" data-i18n="c2_l1">Открыть FreelanceMatch</a>
+            <a href="https://7lver10.github.io/freelancematch-demo/" data-i18n="c2_l2">Публичное демо в браузере</a>
+            <a href="https://t.me/I_V_A_A_V_I/19" data-i18n="l_post">Пост-кейс в канале</a>
           </div>
           <div class="gallery gallery--phones">
-            <figure><a href="assets/img/fm_rol.jpg"><img src="assets/img/fm_rol.jpg" alt="Выбор роли: фрилансер или заказчик" width="780" height="1688"></a><figcaption>Выбор роли</figcaption></figure>
-            <figure><a href="assets/img/fm_lenta.jpg"><img src="assets/img/fm_lenta.jpg" alt="Лента заказов из открытых источников" width="780" height="1688"></a><figcaption>Лента заказов</figcaption></figure>
-            <figure><a href="assets/img/fm_sohraneno.jpg"><img src="assets/img/fm_sohraneno.jpg" alt="Заказ сохранён в «Мои отклики»" width="780" height="1688"></a><figcaption>Сохранено в «Мои отклики»</figcaption></figure>
-            <figure><a href="assets/img/fm_otkliki.jpg"><img src="assets/img/fm_otkliki.jpg" alt="Раздел «Мои отклики»" width="780" height="1688"></a><figcaption>Мои отклики</figcaption></figure>
-            <figure><a href="assets/img/fm_ocenka.jpg"><img src="assets/img/fm_ocenka.jpg" alt="Оценка работы после сделки" width="780" height="1688"></a><figcaption>Оценка после сделки</figcaption></figure>
+            <figure><a href="assets/img/fm_rol.jpg"><img src="assets/img/fm_rol.jpg" alt="" width="780" height="1688"></a><figcaption data-i18n="c2_f1">Выбор роли</figcaption></figure>
+            <figure><a href="assets/img/fm_lenta.jpg"><img src="assets/img/fm_lenta.jpg" alt="" width="780" height="1688"></a><figcaption data-i18n="c2_f2">Лента заказов</figcaption></figure>
+            <figure><a href="assets/img/fm_sohraneno.jpg"><img src="assets/img/fm_sohraneno.jpg" alt="" width="780" height="1688"></a><figcaption data-i18n="c2_f3">Сохранено в «Мои отклики»</figcaption></figure>
+            <figure><a href="assets/img/fm_otkliki.jpg"><img src="assets/img/fm_otkliki.jpg" alt="" width="780" height="1688"></a><figcaption data-i18n="c2_f4">Мои отклики</figcaption></figure>
+            <figure><a href="assets/img/fm_ocenka.jpg"><img src="assets/img/fm_ocenka.jpg" alt="" width="780" height="1688"></a><figcaption data-i18n="c2_f5">Оценка после сделки</figcaption></figure>
           </div>
-          <p class="note">Экраны из рабочей версии, заказы из открытых источников. Данные на экране оценки вымышленные. В публичном демо профили тоже вымышленные.</p>
+          <p class="note" data-i18n="c2_f_note">Экраны из рабочей версии, заказы из открытых источников. Данные на экране оценки вымышленные. В публичном демо профили тоже вымышленные.</p>
         </div>
 
         <div class="step step--result">
-          <h4><i>05</i> Результат</h4>
+          <h4><i>05</i> <span data-i18n="st_result">Результат</span></h4>
           <ul class="results">
-            <li>Недоделанный проект доведён до рабочего Mini App и запущен в Telegram: <a href="https://t.me/goldbergggbot">@goldbergggbot</a>.</li>
-            <li>Исправлены ошибки, из-за которых приложение не открылось бы, и закрыт доступ к чужим чатам.</li>
-            <li>Первый прогон сборщика собрал 81 заказ из открытых источников.</li>
-            <li>Публичное демо открывается в браузере на телефоне, без Telegram.</li>
+            <li data-i18n="c2_r1">Недоделанный проект доведён до рабочего Mini App и запущен в Telegram: <a href="https://t.me/goldbergggbot">@goldbergggbot</a>.</li>
+            <li data-i18n="c2_r2">Исправлены ошибки, из-за которых приложение не открылось бы, и закрыт доступ к чужим чатам.</li>
+            <li data-i18n="c2_r3">Первый прогон сборщика собрал 81 заказ из открытых источников.</li>
+            <li data-i18n="c2_r4">Публичное демо открывается в браузере на телефоне, без Telegram.</li>
           </ul>
-          <p class="note">Цифр по пользователям пока нет: приложение только запущено.</p>
+          <p class="note" data-i18n="c2_r_note">Цифр по пользователям пока нет: приложение только запущено.</p>
         </div>
       </div>
     </div>
@@ -286,83 +300,83 @@
 <!-- УСЛУГИ -->
 <section id="services" class="section section--alt">
   <div class="wrap">
-    <p class="eyebrow">Услуги</p>
-    <h2>Что мы создаём</h2>
+    <p class="eyebrow" data-i18n="sv_eyebrow">Услуги</p>
+    <h2 data-i18n="sv_h2">Что мы создаём</h2>
     <div class="cards">
       <div class="card">
-        <h4>Telegram-боты</h4>
-        <p>Для продаж, поддержки, записи и коммуникаций: приём заявок, квалификация клиентов, ответы на частые вопросы, передача горячих лидов менеджеру, подключение к CRM.</p>
+        <h4 data-i18n="sv1_t">Telegram-боты</h4>
+        <p data-i18n="sv1_p">Для продаж, поддержки, записи и коммуникаций: приём заявок, квалификация клиентов, ответы на частые вопросы, передача горячих лидов менеджеру, подключение к CRM.</p>
       </div>
       <div class="card card--accent">
         <h4>Telegram Mini Apps</h4>
-        <p>Приложение для бизнеса прямо внутри Telegram. Без скачивания, без регистрации, в два касания: онлайн-запись, каталог, магазин, личный кабинет, маркетплейс и подбор.</p>
+        <p data-i18n="sv2_p">Приложение для бизнеса прямо внутри Telegram. Без скачивания, без регистрации, в два касания: онлайн-запись, каталог, магазин, личный кабинет, маркетплейс и подбор.</p>
       </div>
       <div class="card">
-        <h4>ИИ-агенты</h4>
-        <p>Цифровые сотрудники для многошаговых задач: собирают и анализируют информацию, обрабатывают заявки, готовят отчёты, проверяют правила и передают задачу человеку.</p>
+        <h4 data-i18n="sv3_t">ИИ-агенты</h4>
+        <p data-i18n="sv3_p">Цифровые сотрудники для многошаговых задач: собирают и анализируют информацию, обрабатывают заявки, готовят отчёты, проверяют правила и передают задачу человеку.</p>
       </div>
       <div class="card">
-        <h4>Автоматизация процессов</h4>
-        <p>Обработка лидов, напоминания и уведомления, отчёты, внутренние согласования, работа с документами — всё, что забирает время команды.</p>
+        <h4 data-i18n="sv4_t">Автоматизация процессов</h4>
+        <p data-i18n="sv4_p">Обработка лидов, напоминания и уведомления, отчёты, внутренние согласования, работа с документами — всё, что забирает время команды.</p>
       </div>
       <div class="card">
-        <h4>CRM и интеграции</h4>
-        <p>Сайт → CRM, бот → CRM, заявка → уведомление менеджеру, оплата → статус заказа, данные → отчёт для руководителя.</p>
+        <h4 data-i18n="sv5_t">CRM и интеграции</h4>
+        <p data-i18n="sv5_p">Сайт → CRM, бот → CRM, заявка → уведомление менеджеру, оплата → статус заказа, данные → отчёт для руководителя.</p>
       </div>
       <div class="card">
-        <h4>Сайты и веб-приложения</h4>
-        <p>Сайты, которые работают как часть системы продаж: лендинги, каталоги и витрины, личные кабинеты, интеграция с формами, CRM и мессенджерами.</p>
+        <h4 data-i18n="sv6_t">Сайты и веб-приложения</h4>
+        <p data-i18n="sv6_p">Сайты, которые работают как часть системы продаж: лендинги, каталоги и витрины, личные кабинеты, интеграция с формами, CRM и мессенджерами.</p>
       </div>
     </div>
 
     <div class="miniapps">
       <div>
-        <h3>Почему Mini App в Telegram</h3>
+        <h3 data-i18n="ma_h1">Почему Mini App в Telegram</h3>
         <ul>
-          <li>Клиент уже в Telegram — не нужно уговаривать скачать приложение.</li>
-          <li>Вход без паролей: Telegram сам передаёт имя и язык клиента.</li>
-          <li>Оплата внутри: Telegram Stars, карта или крипта, в зависимости от страны.</li>
-          <li>Уведомления приходят в чат и не теряются, как email.</li>
-          <li>Работает по всему миру: RU, EN, TR и другие языки.</li>
+          <li data-i18n="ma1">Клиент уже в Telegram — не нужно уговаривать скачать приложение.</li>
+          <li data-i18n="ma2">Вход без паролей: Telegram сам передаёт имя и язык клиента.</li>
+          <li data-i18n="ma3">Оплата внутри: Telegram Stars, карта или крипта, в зависимости от страны.</li>
+          <li data-i18n="ma4">Уведомления приходят в чат и не теряются, как email.</li>
+          <li data-i18n="ma5">Работает по всему миру: RU, EN, TR и другие языки.</li>
         </ul>
       </div>
       <div>
-        <h3>Что входит</h3>
+        <h3 data-i18n="ma_h2">Что входит</h3>
         <ul>
-          <li>Telegram-бот и Mini App под ключ.</li>
-          <li>Админ-панель или уведомления владельцу.</li>
-          <li>Интеграции: CRM, Google Sheets, оплата, Make.</li>
-          <li>Мультиязычность.</li>
-          <li>Передача доступов и документации владельцу.</li>
+          <li data-i18n="ma6">Telegram-бот и Mini App под ключ.</li>
+          <li data-i18n="ma7">Админ-панель или уведомления владельцу.</li>
+          <li data-i18n="ma8">Интеграции: CRM, Google Sheets, оплата, Make.</li>
+          <li data-i18n="ma9">Мультиязычность.</li>
+          <li data-i18n="ma10">Передача доступов и документации владельцу.</li>
         </ul>
       </div>
     </div>
-    <p class="muted">Сроки и стоимость зависят от состава и считаются индивидуально после аудита.</p>
+    <p class="muted" data-i18n="sv_note">Сроки и стоимость зависят от состава и считаются индивидуально после аудита.</p>
   </div>
 </section>
 
 <!-- ПРОЦЕСС -->
 <section id="process" class="section">
   <div class="wrap">
-    <p class="eyebrow">Как работаем</p>
-    <h2>От аудита до развития системы</h2>
+    <p class="eyebrow" data-i18n="pr_eyebrow">Как работаем</p>
+    <h2 data-i18n="pr_h2">От аудита до развития системы</h2>
     <ol class="process">
-      <li><b>Анализ задачи</b><span>Разбираем текущий процесс: где теряется время и клиенты, что можно автоматизировать, какие сервисы уже используются.</span></li>
-      <li><b>Проектирование</b><span>Предлагаем архитектуру, а не набор инструментов: какие модули нужны, что делает ИИ, где нужен контроль человека.</span></li>
-      <li><b>Разработка и интеграция</b><span>Создаём решение и подключаем его к рабочим сервисам компании.</span></li>
-      <li><b>Тестирование и запуск</b><span>Проверяем сценарии, ошибки, границы и устойчивость системы до запуска.</span></li>
-      <li><b>Поддержка и развитие</b><span>Новые функции, интеграции, агенты и автоматизации — без ломки основы.</span></li>
+      <li><b data-i18n="pr1_t">Анализ задачи</b><span data-i18n="pr1_p">Разбираем текущий процесс: где теряется время и клиенты, что можно автоматизировать, какие сервисы уже используются.</span></li>
+      <li><b data-i18n="pr2_t">Проектирование</b><span data-i18n="pr2_p">Предлагаем архитектуру, а не набор инструментов: какие модули нужны, что делает ИИ, где нужен контроль человека.</span></li>
+      <li><b data-i18n="pr3_t">Разработка и интеграция</b><span data-i18n="pr3_p">Создаём решение и подключаем его к рабочим сервисам компании.</span></li>
+      <li><b data-i18n="pr4_t">Тестирование и запуск</b><span data-i18n="pr4_p">Проверяем сценарии, ошибки, границы и устойчивость системы до запуска.</span></li>
+      <li><b data-i18n="pr5_t">Поддержка и развитие</b><span data-i18n="pr5_p">Новые функции, интеграции, агенты и автоматизации — без ломки основы.</span></li>
     </ol>
 
     <div class="compare">
-      <div class="compare__row compare__row--head"><span>Обычный подход</span><span>Подход IVA</span></div>
-      <div class="compare__row"><span>Создать сайт или бота</span><span>Построить рабочую систему</span></div>
-      <div class="compare__row"><span>Автоматизировать отдельное действие</span><span>Автоматизировать процесс целиком</span></div>
+      <div class="compare__row compare__row--head"><span data-i18n="cmp_h1">Обычный подход</span><span data-i18n="cmp_h2">Подход IVA</span></div>
+      <div class="compare__row"><span data-i18n="cmp_1a">Создать сайт или бота</span><span data-i18n="cmp_1b">Построить рабочую систему</span></div>
+      <div class="compare__row"><span data-i18n="cmp_2a">Автоматизировать отдельное действие</span><span data-i18n="cmp_2b">Автоматизировать процесс целиком</span></div>
     </div>
 
     <div class="for-whom">
-      <h3>Кому подходит</h3>
-      <p>Малому и среднему бизнесу, сервисным компаниям, продажным командам, экспертам, производственным и B2B-направлениям — всем, кому нужно принимать больше заявок без потери качества, быстрее отвечать клиентам, сократить ручную работу и связать сайт, бота и CRM в одну систему.</p>
+      <h3 data-i18n="fw_h">Кому подходит</h3>
+      <p data-i18n="fw_p">Малому и среднему бизнесу, сервисным компаниям, продажным командам, экспертам, производственным и B2B-направлениям — всем, кому нужно принимать больше заявок без потери качества, быстрее отвечать клиентам, сократить ручную работу и связать сайт, бота и CRM в одну систему.</p>
     </div>
   </div>
 </section>
@@ -371,13 +385,14 @@
 <section class="cta">
   <div class="wrap cta__in">
     <img src="assets/img/logo_180.png" alt="" width="96" height="96">
-    <h2>Такая же система — <em>под ваш процесс</em></h2>
-    <p>Начните с бесплатного аудита: разберём, как сейчас проходят заявки и где теряются клиенты.</p>
+    <h2 data-i18n="cta_h2">Такая же система — <em>под ваш процесс</em></h2>
+    <p data-i18n="cta_p">Начните с бесплатного аудита: разберём, как сейчас проходят заявки и где теряются клиенты.</p>
     <div class="btns btns--center">
-      <a class="btn btn--gold" href="https://t.me/ivavit_bot?start=audit">Получить бесплатный аудит</a>
-      <a class="btn btn--line" href="https://t.me/iva7lver">Написать @iva7lver</a>
+      <a class="btn btn--gold" href="https://t.me/ivavit_bot?start=audit" data-i18n="cta_btn">Получить бесплатный аудит</a>
+      <a class="btn btn--line" href="https://t.me/iva7lver" data-i18n="btn_write">Написать @iva7lver</a>
     </div>
-    <p class="cta__small"><a href="https://t.me/I_V_A_A_V_I">Канал I.V.A в Telegram</a></p>
+    <p class="langnote langnote--center" data-i18n="langnote"></p>
+    <p class="cta__small"><a href="https://t.me/I_V_A_A_V_I" data-i18n="cta_channel">Канал I.V.A в Telegram</a></p>
   </div>
 </section>
 
@@ -390,5 +405,6 @@
   </div>
 </footer>
 
+<script src="i18n.js"></script>
 </body>
 </html>
