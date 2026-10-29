@@ -37,6 +37,7 @@ document.documentElement.lang=l;if(l!=='ru'){document.documentElement.className+
       <a href="#cases" data-i18n="nav_cases">Кейсы</a>
       <a href="#services" data-i18n="nav_services">Услуги</a>
       <a href="#process" data-i18n="nav_process">Как работаем</a>
+      <a href="#certificates" data-i18n="nav_certificates">Сертификаты</a>
       <div class="lang">
         <button type="button" class="lang__btn" aria-haspopup="true" aria-expanded="false" aria-controls="lang-menu" aria-label="Язык · Language · Dil">
           <svg class="lang__globe" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
@@ -80,6 +81,19 @@ document.documentElement.lang=l;if(l!=='ru'){document.documentElement.className+
       <p class="langnote" data-i18n="langnote"></p>
     </div>
     <div class="hero__logo">
+      <svg class="hero__diagram" viewBox="0 0 500 500" aria-hidden="true" focusable="false">
+        <defs>
+          <pattern id="hero-grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#B89D6E" stroke-opacity=".10" stroke-width=".6"/></pattern>
+          <radialGradient id="hero-glow"><stop offset="0" stop-color="#B89D6E" stop-opacity=".12"/><stop offset="1" stop-color="#B89D6E" stop-opacity="0"/></radialGradient>
+        </defs>
+        <rect x="18" y="18" width="464" height="464" fill="url(#hero-grid)" stroke="#B89D6E" stroke-opacity=".3"/>
+        <circle cx="250" cy="250" r="202" fill="url(#hero-glow)" stroke="#B89D6E" stroke-opacity=".24"/>
+        <circle cx="250" cy="250" r="166" fill="none" stroke="#B89D6E" stroke-opacity=".32" stroke-dasharray="2 7"/>
+        <circle cx="250" cy="250" r="126" fill="none" stroke="#B89D6E" stroke-opacity=".2"/>
+        <path d="M250 48V112M452 250H388M250 452V388M48 250H112M107 107l47 47m192 192 47 47m0-286-47 47M154 346l-47 47" fill="none" stroke="#B89D6E" stroke-opacity=".5"/>
+        <g fill="#0E0F11" stroke="#D2BC92" stroke-width="1.2"><circle cx="250" cy="48" r="5"/><circle cx="452" cy="250" r="5"/><circle cx="250" cy="452" r="5"/><circle cx="48" cy="250" r="5"/><rect x="146" y="146" width="8" height="8"/><rect x="346" y="346" width="8" height="8"/><rect x="346" y="146" width="8" height="8"/><rect x="146" y="346" width="8" height="8"/></g>
+        <path d="M18 42h28M42 18v28M454 18v28M482 42h-28M18 458h28M42 482v-28M454 482v-28M482 458h-28" fill="none" stroke="#D2BC92" stroke-opacity=".68"/>
+      </svg>
       <img src="assets/img/logo_512.png" alt="IVA" width="512" height="512">
     </div>
   </div>
@@ -317,6 +331,16 @@ document.documentElement.lang=l;if(l!=='ru'){document.documentElement.className+
   </article>
 </section>
 
+<!-- СЕРТИФИКАТЫ -->
+<section id="certificates" class="section cert-section">
+  <div class="wrap">
+    <p class="eyebrow" data-i18n="cert_eyebrow">Сертификаты</p>
+    <h2 data-i18n="cert_h2">Пройденные программы</h2>
+    <p class="muted cert-section__intro" data-i18n="cert_sub">Документы об окончании профильных программ и практических занятий.</p>
+    <div class="certificate-grid" id="certificate-list" aria-live="polite"></div>
+  </div>
+</section>
+
 <!-- УСЛУГИ -->
 <section id="services" class="section section--alt">
   <div class="wrap">
@@ -425,6 +449,7 @@ document.documentElement.lang=l;if(l!=='ru'){document.documentElement.className+
   </div>
 </footer>
 
+<script src="certificates.js"></script>
 <script src="i18n.js"></script>
 </body>
 </html>
