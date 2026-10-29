@@ -18,7 +18,11 @@
       nav_cases: `Cases`,
       nav_services: `Services`,
       nav_process: `How we work`,
+      nav_certificates: `Certificates`,
       nav_audit: `Audit`,
+      cert_eyebrow: `Certificates`,
+      cert_h2: `Completed programmes`,
+      cert_sub: `Documents for completed specialist programmes and practical training.`,
       hero_h1: `Digital systems that <em>take routine off your plate</em>`,
       hero_lead: `We don’t just build websites, bots or one-off services. We design systems that speed up business processes and turn leads, data and communication into results you can manage.`,
       btn_audit: `Free audit`,
@@ -184,7 +188,11 @@
       nav_cases: `Projeler`,
       nav_services: `Hizmetler`,
       nav_process: `Çalışma modelimiz`,
+      nav_certificates: `Sertifikalar`,
       nav_audit: `Analiz`,
+      cert_eyebrow: `Sertifikalar`,
+      cert_h2: `Tamamlanan programlar`,
+      cert_sub: `Tamamlanan uzmanlık programları ve uygulamalı eğitimlere ait belgeler.`,
       hero_h1: `Rutin işleri <em>üstlenen dijital sistemler</em>`,
       hero_lead: `Yalnızca web sitesi, bot ya da tekil servisler geliştirmiyoruz. İş süreçlerini hızlandıran; talepleri, verileri ve iletişimi yönetilebilir sonuçlara dönüştüren sistemler tasarlıyoruz.`,
       btn_audit: `Ücretsiz analiz`,
@@ -373,6 +381,7 @@
       if (k === 'langnote') nodes[i].hidden = !v;
     }
     document.documentElement.lang = lang;
+    if (typeof window.renderCertificates === 'function') window.renderCertificates(lang);
     document.title = META[lang].title;
     var md = document.querySelector('meta[name="description"]');
     if (md) md.setAttribute('content', META[lang].desc);
