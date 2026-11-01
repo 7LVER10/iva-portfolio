@@ -2,6 +2,28 @@
 (function () {
   var IVA_CERTIFICATES = [
     {
+      id: 'manus-intermediate',
+      image: 'assets/img/cert-manus-intermediate.jpg',
+      width: 1280,
+      height: 807,
+      title: 'Manus Intermediate',
+      subtitle: {
+        ru: 'Курс среднего уровня',
+        en: 'Intermediate Course',
+        tr: 'Orta seviye kursu'
+      },
+      issuer: {
+        ru: 'Build Club',
+        en: 'Build Club',
+        tr: 'Build Club'
+      },
+      date: {
+        ru: '1 ноября 2026',
+        en: '1 November 2026',
+        tr: '1 Kasım 2026'
+      }
+    },
+    {
       id: 'manus-fundamentals',
       image: 'assets/img/cert-manus-fundamentals.jpg',
       width: 1280,
