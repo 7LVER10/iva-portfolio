@@ -2,6 +2,29 @@
 (function () {
   var IVA_CERTIFICATES = [
     {
+      id: 'manus-advanced',
+      image: 'assets/img/cert-manus-advanced.jpg',
+      width: 1280,
+      height: 807,
+      title: 'Manus Advanced',
+      subtitle: {
+        ru: 'Продвинутый курс',
+        en: 'Advanced Course',
+        tr: 'İleri seviye kursu'
+      },
+      issuer: {
+        ru: 'Build Club',
+        en: 'Build Club',
+        tr: 'Build Club'
+      },
+      date: {
+        ru: '2 ноября 2026',
+        en: '2 November 2026',
+        tr: '2 Kasım 2026'
+      },
+      verificationUrl: 'https://7lver10.github.io/iva-portfolio/manus-advanced/'
+    },
+    {
       id: 'manus-intermediate',
       image: 'assets/img/cert-manus-intermediate.jpg',
       width: 1280,
@@ -72,9 +95,9 @@
   ];
 
   var LABELS = {
-    ru: { completed: 'Завершено', number: 'Номер сертификата', open: 'Открыть оригинал в полном размере', imageAlt: 'Оригинал сертификата' },
-    en: { completed: 'Completed', number: 'Certificate no.', open: 'Open the full-size original', imageAlt: 'Original certificate' },
-    tr: { completed: 'Tamamlandı', number: 'Sertifika no.', open: 'Orijinali tam boyutta aç', imageAlt: 'Sertifikanın orijinali' }
+    ru: { completed: 'Завершено', number: 'Номер сертификата', open: 'Открыть оригинал в полном размере', verify: 'Проверить сертификат', imageAlt: 'Оригинал сертификата' },
+    en: { completed: 'Completed', number: 'Certificate no.', open: 'Open the full-size original', verify: 'Verify certificate', imageAlt: 'Original certificate' },
+    tr: { completed: 'Tamamlandı', number: 'Sertifika no.', open: 'Orijinali tam boyutta aç', verify: 'Sertifikayı doğrula', imageAlt: 'Sertifikanın orijinali' }
   };
 
   function appendText(parent, tag, className, text) {
@@ -128,11 +151,11 @@
 
       var openLabel = document.createElement('a');
       openLabel.className = 'certificate-card__open';
-      openLabel.href = item.image;
+      openLabel.href = item.verificationUrl || item.image;
       openLabel.target = '_blank';
       openLabel.rel = 'noopener noreferrer';
-      openLabel.setAttribute('aria-label', labels.open + ': ' + item.title);
-      openLabel.textContent = labels.open;
+      openLabel.setAttribute('aria-label', (item.verificationUrl ? labels.verify : labels.open) + ': ' + item.title);
+      openLabel.textContent = item.verificationUrl ? labels.verify : labels.open;
       var icon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
       icon.setAttribute('viewBox', '0 0 16 16');
       icon.setAttribute('aria-hidden', 'true');
