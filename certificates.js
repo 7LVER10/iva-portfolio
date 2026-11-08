@@ -2,6 +2,52 @@
 (function () {
   var IVA_CERTIFICATES = [
     {
+      id: 'manus-for-finance',
+      image: 'assets/img/cert-manus-for-finance.jpg',
+      width: 1280,
+      height: 807,
+      title: 'Manus for Finance',
+      subtitle: {
+        ru: 'Продвинутый курс',
+        en: 'Advanced Course',
+        tr: 'İleri seviye kursu'
+      },
+      issuer: {
+        ru: 'Manus Academy · при поддержке Build Club',
+        en: 'Manus Academy · Powered by Build Club',
+        tr: 'Manus Academy · Build Club desteğiyle'
+      },
+      date: {
+        ru: '7 ноября 2026',
+        en: '7 November 2026',
+        tr: '7 Kasım 2026'
+      },
+      verificationUrl: 'https://campus.buildclub.ai/certificate/manus-for-finance-930ece1d-538f-49b3-841f-b9f1ce0bb395'
+    },
+    {
+      id: 'manus-new-features',
+      image: 'assets/img/cert-manus-new-features.jpg',
+      width: 1280,
+      height: 807,
+      title: 'Manus New Features',
+      subtitle: {
+        ru: 'Продвинутый курс',
+        en: 'Advanced Course',
+        tr: 'İleri seviye kursu'
+      },
+      issuer: {
+        ru: 'Build Club',
+        en: 'Build Club',
+        tr: 'Build Club'
+      },
+      date: {
+        ru: '4 ноября 2026',
+        en: '4 November 2026',
+        tr: '4 Kasım 2026'
+      },
+      verificationUrl: 'https://campus.buildclub.ai/certificate/manus-new-features-fda1298b-50af-428a-ba9a-c4defe6897c9'
+    },
+    {
       id: 'manus-advanced',
       image: 'assets/img/cert-manus-advanced.jpg',
       width: 1280,
