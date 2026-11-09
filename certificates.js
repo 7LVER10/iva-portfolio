@@ -25,6 +25,29 @@
       verificationUrl: 'https://campus.buildclub.ai/certificate/manus-for-finance-930ece1d-538f-49b3-841f-b9f1ce0bb395'
     },
     {
+      id: 'manus-business-analysts',
+      image: 'assets/img/cert-manus-business-analysts.jpg',
+      width: 1280,
+      height: 807,
+      title: 'Manus for Business Analysts',
+      subtitle: {
+        ru: 'Продвинутый курс',
+        en: 'Advanced Course',
+        tr: 'İleri seviye kursu'
+      },
+      issuer: {
+        ru: 'Build Club',
+        en: 'Build Club',
+        tr: 'Build Club'
+      },
+      date: {
+        ru: '5 ноября 2026',
+        en: '5 November 2026',
+        tr: '5 Kasım 2026'
+      },
+      verificationUrl: 'https://campus.buildclub.ai/certificate/manus-for-business-analysts-ea0d1a92-17fa-4f27-b304-07411b4d030e'
+    },
+    {
       id: 'manus-new-features',
       image: 'assets/img/cert-manus-new-features.jpg',
       width: 1280,
